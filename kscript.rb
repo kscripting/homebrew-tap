@@ -8,7 +8,6 @@ class Kscript < Formula
   
   def install
     libexec.install Dir["*"]
-    inreplace "#{libexec}/bin/kscript", /^JAR_PATH=.*/, "JAR_PATH=#{libexec}/bin/kscript.jar"
     bin.install_symlink "#{libexec}/bin/kscript"
   end
 end
